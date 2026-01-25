@@ -30,7 +30,7 @@ class Profile(Base):
     __tablename__ = "profiles"
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
-    is_kids = Column(Boolean, default=True)
+    is_child = Column(Boolean, default=True)
     max_rating_level = Column(Integer)
     pin_hash = Column(String, nullable=True)
     user_id = Column(Integer, ForeignKey("users.id"))
