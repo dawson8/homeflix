@@ -1,4 +1,6 @@
-# HomeFlix — Developer Quickstart (Phase-0)
+# DEV_GUIDE.md — HomeFlix Phase-0 Quickstart
+
+# Developer Quickstart — Phase-0
 
 ## 1️⃣ Clone the Repo
 
@@ -38,7 +40,7 @@ npm start
 
 ```bash
 cd backend
-uvicorn app.main:app --reload
+python run.py
 ```
 
 - FastAPI runs at `http://127.0.0.1:8000`  
@@ -46,30 +48,38 @@ uvicorn app.main:app --reload
 
 ---
 
-## 5️⃣ GitHub Workflow
+## 5️⃣ Available Endpoints (Phase-0)
+
+- `/auth/ping` → test auth router  
+- `/profiles/` → list profiles  
+- `/media/` → list media  
+
+Tables auto-created on first run.
+
+---
+
+## 6️⃣ GitHub Workflow
 
 ```bash
 git add .
-git commit -m "Phase-0 initial setup: backend + frontend"
-git push -u origin main
+git commit -m "Phase-0 backend skeleton with run.py, models, routers, and React frontend template"
+git push
 ```
 
 ---
 
-## ✅ Notes / Tips
+## 7️⃣ Notes / Tips
 
-- Backend uses **FastAPI + SQLAlchemy + JWT + SQLite**  
-- Frontend is a **React template** ready for viewer/admin UI  
-- Virtual environment **isolates dependencies**  
-- Phase-0 is **skeleton only**, no media ingestion or profiles yet  
-- Keep `.gitignore` updated to avoid committing `venv` or `node_modules`  
+- Backend uses **FastAPI + SQLAlchemy + SQLite**  
+- Frontend is a **React template** ready to connect  
+- `run.py` replaces manual `uvicorn` command  
+- Phase-0 is **skeleton only**, no media ingestion or device auth yet
 
 ---
 
-## 6️⃣ Next Steps
+## 8️⃣ Next Steps
 
-1. Build **backend skeleton** (`main.py`, `db.py`, `models.py`, routers)  
-2. Add **profiles + media seed data**  
-3. Implement **device auth + JWT**  
-4. Connect React frontend to API  
-5. Start **viewer vs admin capability enforcement**
+1. Add **seed profiles & media items**  
+2. Implement **device auth / JWT**  
+3. Connect React frontend to API  
+4. Plan for **Docker + Postgres migration** in Phase-1
